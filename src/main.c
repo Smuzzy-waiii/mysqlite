@@ -27,6 +27,14 @@ int main(int argc, char* argv[]) {
       case (PREPARE_SUCCESS):
         break;
 
+      case (PREPARE_STRING_TOO_LONG):
+        printf("String is too long.\n");
+        continue;
+
+      case (PREPARE_ID_NEGATIVE):
+        printf("ID must be positive.\n");
+        continue;
+
       case (PREPARE_SYNTAX_ERROR):
         printf("Syntax error. Could not parse statement.\n");
         continue;
@@ -39,7 +47,7 @@ int main(int argc, char* argv[]) {
 
     switch (execute_statement(&statement, table)) {
       case (EXECUTE_SUCCESS):
-        printf("Executed\n");
+        printf("Executed.\n");
         break;
       case (EXECUTE_TABLE_FULL):
         printf("ERR. Table iis fuuull.\n");
