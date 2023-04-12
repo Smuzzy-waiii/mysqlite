@@ -1,6 +1,6 @@
 #include "repl_helper/repl_helper.h"
 #include "SQLCompiler/SQLCompiler.h"
-#include "VirtualMachine/VitualMachine.h"
+#include "VirtualMachine/VirtualMachine.h"
 #include <string.h>
 #include <stdbool.h>
 

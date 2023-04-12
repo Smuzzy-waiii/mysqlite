@@ -1,4 +1,4 @@
-#include "VitualMachine.h"
+#include "VirtualMachine.h"
 
 void execute_statement(Statement* statement) {
   switch (statement->type) {
