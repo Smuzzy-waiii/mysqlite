@@ -1,0 +1,1 @@
+gcc -o mydb main.c repl_helper/repl_helper.c SQLCompiler/SQLCompiler.c VirtualMachine/VirtualMachine.c
