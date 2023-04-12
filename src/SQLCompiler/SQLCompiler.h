@@ -2,6 +2,9 @@
 #include "../repl_helper/repl_helper.h"
 #include <string.h>
 
+#define COLUMN_USERNAME_SIZE 32
+#define COLUMN_EMAIL_SIZE 255
+
 typedef enum {
   META_COMMAND_SUCCESS,
   META_COMMAND_UNRECOGNIZED_COMMAND
@@ -9,8 +12,15 @@ typedef enum {
 
 typedef enum { 
   PREPARE_SUCCESS, 
+  PREPARE_SYNTAX_ERROR,
   PREPARE_UNRECOGNIZED_STATEMENT 
 } PrepareResult;
+
+typedef struct {
+	uint32_t id;
+	char username[COLUMN_USERNAME_SIZE];
+	char email[COLUMN_EMAIL_SIZE];
+} Row;
 
 typedef enum { 
 	STATEMENT_INSERT, 
@@ -19,6 +29,7 @@ typedef enum {
 
 typedef struct {
   StatementType type;
+  Row row_to_insert;
 } Statement;
 
 MetaCommandResult do_meta_command(InputBuffer* input_buffer);
