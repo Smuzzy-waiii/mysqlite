@@ -56,3 +56,10 @@ cmake-build-debug/*
 .idea/*
 .DS_Store
 src/.DS_Store
+
+# Ruby Stuff
+test/.bundle
+test/spec/spec_helper.rb
+test/.rspec
+test/Gemfile.lock
+test/bin/
