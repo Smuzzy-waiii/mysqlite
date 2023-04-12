@@ -54,3 +54,5 @@ dkms.conf
 # Clion stuff
 cmake-build-debug/*
 .idea/*
+.DS_Store
+src/.DS_Store
